@@ -1,15 +1,22 @@
 class Timer{
     constructor(durationInput, startButton, pauseButton) {
+        console.log(this);
         this.durationInput = durationInput;
         this.startButton = startButton;
         this.pauseButton = pauseButton;
 
         
         this.startButton.addEventListener("click", this.start);
+
+
     }
 
-    start() {
-        console.log(`Time to start the timer!`);
+    start = () => {
+        this.importantMethodToCall();
+    }
+
+    importantMethodToCall() {
+        console.log("Important method was called");
     }
 }
 
