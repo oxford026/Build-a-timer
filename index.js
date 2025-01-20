@@ -1,23 +1,31 @@
 class Timer{
     constructor(durationInput, startButton, pauseButton) {
-        console.log(this);
         this.durationInput = durationInput;
         this.startButton = startButton;
         this.pauseButton = pauseButton;
 
         
         this.startButton.addEventListener("click", this.start);
+        this.pauseButton.addEventListener("click", this.pause);
 
 
     }
 
     start = () => {
-        this.importantMethodToCall();
+        this.tick();
+        this.interval = setInterval(this.tick, 1000);
     }
 
-    importantMethodToCall() {
-        console.log("Important method was called");
+    pause = () => {
+       clearInterval(this.interval);
     }
+
+    tick = () => {
+        console.log("tick");
+    }
+
+
+
 }
 
 const durationInput = document.querySelector('#duration');
