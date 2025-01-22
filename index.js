@@ -21,7 +21,8 @@ class Timer{
     }
 
     tick = () => {
-        console.log("tick");
+        const timeRemaining = parseFloat(this.durationInput.Value)
+        this.durationInput.Value = timeRemaining - 1
     }
 
 
@@ -34,4 +35,3 @@ const pauseButton = document.querySelector('#pause');
 
 const timer = new Timer(durationInput,startButton,pauseButton);
 
-// nbdzvbj ndv;
