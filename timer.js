@@ -29,7 +29,7 @@ class Timer {
     pause = () => {
         clearInterval(this.interval);
         if (this.onPausue) {
-            this.onPausue();
+            this.onPausue(this.timeRemaining);
         }
     }
 

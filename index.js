@@ -21,7 +21,7 @@ const timer = new Timer(durationInput, startButton, pauseButton , {
         
     },
 
-    onPausue() { 
+    onPausue(timeRemaining) { 
         console.log('Timer is paused');
     },
 
