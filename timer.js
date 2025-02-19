@@ -7,8 +7,7 @@ class Timer {
             this.onStart = callbacks.onStart;
             this.onTick = callbacks.onTick;
             this.onPausue = callbacks.onPausue;
-            this.onComplete = callbacks.onComplete;
-
+            this.onComplete = callbacks.onComplete
         }
 
 
